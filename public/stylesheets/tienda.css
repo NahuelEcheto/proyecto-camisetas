@@ -1,0 +1,132 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+nav .logo {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+nav .botones-nav{
+    color: white;
+}
+
+#inicio .hero {
+    background: linear-gradient(rgba(0,0,0,0.466), rgba(0,0,0,0.473)), url(../images/d3ee3ff8a12f8b5c006b8b5b2bc416eb.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 90vh;
+    min-height: 600px;
+    color: white;
+}
+
+#inicio .div-carousel {
+    background-color: #ECEFF1;
+}
+
+#inicio .carousel-inicio {
+    width: 750px;
+    height: 750px;
+    background-color: #ECEFF1;
+}
+
+#inicio .guia-inicio {
+    align-items: center;
+    margin: 120px 0;
+}
+
+#inicio .texto-inicio {
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+#inicio .botones-deinicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inicio .botones-deinicio a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+#inicio .botones-deinicio button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 8px 30px;
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: white;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.9s;
+}
+
+#inicio .botones-deinicio button:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: black;
+}
+
+#footer {
+    margin-top: auto;
+}
+
+#footer img {
+    height: 30px;
+    width: 30px;
+}
+
+#footer .logo-footer {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+#camisetas {
+    background-color: #ECEFF1;
+}
+
+#camisetas .carta-camiseta {
+    background-color: gray;
+    box-shadow: 15px 5px 10px grey;
+}
+
+#pantalones {
+    background-color: #ECEFF1;
+}
+
+#pantalones .carta-pantalon {
+    background-color: gray;
+    box-shadow: 15px 5px 10px grey;
+}
+
+#contacto {
+    background-color: #ECEFF1;
+    height: 100vh;
+}
+
+#contacto .texto-contacto {
+    padding: 120px;
+}
+
+#contacto .formulario-contacto {
+    padding: 120px;
+}
