@@ -4,13 +4,18 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var session = require('express-session');
+
 require('dotenv').config();
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var camisetasRouter = require('./routes/camisetas');
 var pantalonesRouter = require('./routes/pantalones');
 var contactoRouter = require('./routes/contacto');
+var loginRouter = require('./routes/admin/login');
+var adminRouter = require('./routes/admin/novedades');
 
 var app = express();
 
@@ -24,11 +29,35 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use(session({
+  secret: 'cursoutnproyectocamisetas',
+  resave: false,
+  saveUninitialized: true
+}));
+
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario); 
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect('/admin/login')
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/camisetas', camisetasRouter);
 app.use('/pantalones', pantalonesRouter);
 app.use('/contacto', contactoRouter);
+app.use('/admin/login', loginRouter);
+app.use('/admin/novedades', secured, adminRouter);
 
 
 // catch 404 and forward to error handler
