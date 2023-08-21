@@ -4,7 +4,8 @@
         <div class="col">
             <p class="text-end">
                 <span class="fw-bold fs-5">Hola {{persona}}</span>
-                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesión <i class="fas fa-solid fa-arrow-right"></i></a>
+                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesión <i
+                        class="fas fa-solid fa-arrow-right"></i></a>
             </p>
         </div>
     </div>
@@ -16,7 +17,7 @@
         </div>
         <div class="col-5 text-end">
             <a href="/admin/novedades/agregar" class="btn btn-success">Nuevo <i class="fas fa-solid fa-plus"></i></a>
-        </div>    
+        </div>
     </div>
     {{!-- fin fila 2 --}}
     {{!-- inicio fila 3 --}}
@@ -27,6 +28,7 @@
                     <tr class="table-dark">
                         <th scope="col">#</th>
                         <th scope="col">Titulo</th>
+                        <th scope="col">Imagen</th>
                         <th scope="col" class="text-right">Acciones</th>
                     </tr>
                 </thead>
@@ -35,9 +37,12 @@
                     <tr>
                         <th scope="row">{{id}}</th>
                         <td>{{titulo}}</td>
+                        <td>{{{imagen}}}</td>
                         <td class="text-end">
-                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i class="fas fa-solid fa-pen"></i></a>
-                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i class="fas fa-solid fa-trash"></i></a> 
+                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i
+                                    class="fas fa-solid fa-pen"></i></a>
+                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i
+                                    class="fas fa-solid fa-trash"></i></a>
                         </td>
                     </tr>
                     {{/each}}
