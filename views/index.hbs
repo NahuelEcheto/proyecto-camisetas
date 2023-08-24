@@ -35,13 +35,16 @@
             </button>
         </div>
     </div>
-    <div class="row my-3">
-        <div id="novedades" class="col-md-5 offser-md-2 scroll_section">
+    <div id="seccion-novedad">
+        <div id="novedades" class="col offser-md-2 scroll_section">
             <h2>Novedades</h2>
             <ul class="lista-novedades">
                 {{#each novedades}}
                 <li>
-                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Modal{{id}}">{{titulo}}</a>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Modal{{id}}">
+                        {{titulo}}
+                        <p>{{subtitulo}}</p>
+                    </a>                    
                 </li>
                 {{/each}}
             </ul>
@@ -76,9 +79,9 @@
             </p>
         </div>
         <div class="col botones-deinicio">
-            <a href="/camisetas.hbs"><button>Ver camisetas</button></a>
-            <a href="/pantalones.hbs"><button>Ver pantalones</button></a>
-            <a href="/contacto.hbs"><button>Contactanos</button></a>
+            <a href="/camisetas"><button>Ver camisetas</button></a>
+            <a href="/pantalones"><button>Ver pantalones</button></a>
+            <a href="/contacto"><button>Contactanos</button></a>
         </div>
     </div>
 

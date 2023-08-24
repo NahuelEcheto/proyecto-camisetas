@@ -83,6 +83,39 @@ nav .botones-nav{
     background-color: black;
 }
 
+#seccion-novedad {
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+}
+
+#novedades h2 {
+    text-align: center;
+    font-size: 72px;
+    margin: 50px;
+}
+
+#novedades li {
+    padding: 10px;
+    width: 90%;
+}
+
+#novedades li:hover {
+    background-color: rgba(255, 255, 255, 0.397);
+}
+
+#novedades .lista-novedades {
+    list-style: none;
+    width: 100%;
+}
+
+#novedades .lista-novedades a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+
 #footer {
     margin-top: auto;
 }
@@ -103,6 +136,7 @@ nav .botones-nav{
 #camisetas {
     background-color: #ECEFF1;
 }
+
 
 #camisetas .carta-camiseta {
     background-color: gray;
@@ -129,4 +163,5 @@ nav .botones-nav{
 
 #contacto .formulario-contacto {
     padding: 120px;
+    background-color: gray;
 }
